@@ -1,0 +1,21 @@
+<form [formGroup]="myForm">
+  <label for="name">Name: </label>
+  <input id="name" type="text" formControlName="name" [readonly]="isDisabled">
+  <label for="pass">pass: </label>
+  <input id="pass" type="text" formControlName="pass" [readonly]="isDisabled">
+  <label for="shoot">shoot: </label>
+  <input id="shoot" type="text" formControlName="shoot" [readonly]="isDisabled">
+  <label for="control">control: </label>
+  <input id="control" type="text" formControlName="control" [readonly]="isDisabled">
+  <label for="country">Country: </label>
+  <input id="country" type="text" formControlName="country" [readonly]="isDisabled">
+  <label for="defense">Defense: </label>
+  <input id="defense" type="text" formControlName="defense" [readonly]="isDisabled">
+</form>
+
+<div *ngIf="!isDisabled">
+  <div class="button">
+    <button type="button" (click)="updateTable()">Send data to table</button>
+  </div>
+</div>
+

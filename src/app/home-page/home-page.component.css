@@ -1,0 +1,16 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  padding-top: 30px;
+  align-items: center;
+  gap: 5rem;
+}
+
+.title{
+    border: 1px solid black;
+    width:70%;
+    text-align:center;
+    border-radius:7px;
+    background-color:cornflowerblue;
+}

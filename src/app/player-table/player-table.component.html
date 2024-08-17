@@ -1,0 +1,24 @@
+
+<div *ngIf="!selectedPlayer || goBackFlag">
+  <kendo-grid [kendoGridBinding]="players" [pageSize]="10" [sortable]="true" [pageable]="true" (cellClick)="cellClickHandler($event)">
+    <kendo-grid-checkbox-column [width]="40"></kendo-grid-checkbox-column>
+    <kendo-grid-column field="id" title="ID" [width]="50"></kendo-grid-column>
+    <kendo-grid-column field="name" title="Name" [width]="50"></kendo-grid-column>
+    <kendo-grid-column field="pass" title="Pass" [width]="80"></kendo-grid-column>
+    <kendo-grid-column field="shoot" title="Shoot" [width]="80"></kendo-grid-column>
+    <kendo-grid-column field="control" title="Control" [width]="80"></kendo-grid-column>
+    <kendo-grid-column field="country" title="Country" [width]="50"></kendo-grid-column>
+    <kendo-grid-column field="defense" title="Defense" [width]="80"></kendo-grid-column>
+  </kendo-grid>
+</div>
+
+
+<div *ngIf="selectedPlayer && !goBackFlag">
+  <app-tab-page [selectedPlayer]="selectedPlayer"></app-tab-page>
+</div>
+
+<div class="button" *ngIf="selectedPlayer && !goBackFlag">
+  <button type="button" (click)="goBack()">Home</button>
+</div>
+
+

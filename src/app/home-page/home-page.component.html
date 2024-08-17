@@ -1,0 +1,31 @@
+<div class="container">
+  <div class="title">
+    <h2>This is the main page</h2>
+    <ul>
+      Ιεραρχία:
+      <li>
+        Home component -> χρησιμοποιούμε το service για να φέρουμε τα data όλων των players. Στο template του εμφανίζουμε το table component στο οποίο με data binding περνάμε την λίστα των players.
+      </li>
+      <li>
+        Player table component -> λαμβάνουμε τα data των players και στο template του τα εμφανίζουμε σε kendo grid. Με *ngIf εμφανίζουμε ή κρύβουμε το tabs component. Έχουμε προσθέσει λειτουργικότητα κλικ που στέλνει στο tabs component το object.
+      </li>
+      <li>
+        Tabs component -> λαμβάνουμε το οbject του player το οποίο το παίρνουμε και το περνάμε στο fiels component. Απλά κουβαλάει το object και έχει την λειτουργικότητα της kendo tabs.ώστε να εμφανίσουμε τα στοιχεία του σε disabled ή enabled πεδία. Τα πεδία τα φέρνουμε από το fields component.
+      </li>
+      <li>
+        Fiels component -> λαμβάνουμε το οbject του player το οποίο το παίρνουμε και το περνάμε στα πεδία της φόρμας. Υπάρχει button το οποίο ενημερώνει το object με νέο value σε property
+      </li>
+    </ul>
+    <p>Ιεραρχία:</p>
+    <p>
+    </p>
+    <p>
+    </p>
+    <p>
+    </p>
+    <p>
+    </p>
+  </div>
+  
+  <app-player-table [players]="players"></app-player-table>
+</div>

@@ -1,0 +1,14 @@
+<div class="wrapper">
+  <kendo-tabstrip (tabSelect)="onTabSelect($event)">
+    <kendo-tabstrip-tab title="Disabled Fields" [selected]="true">
+      <ng-template kendoTabContent>
+        <app-fields [isDisabled]="isDisabledFields" [selectedPlayer]="selectedPlayer"></app-fields>
+      </ng-template>
+    </kendo-tabstrip-tab>
+    <kendo-tabstrip-tab title="Editable Fields">
+      <ng-template kendoTabContent>
+        <app-fields [selectedPlayer]="selectedPlayer"></app-fields>
+      </ng-template>
+    </kendo-tabstrip-tab>
+  </kendo-tabstrip>
+</div>
